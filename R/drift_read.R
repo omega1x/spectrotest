@@ -1,0 +1,53 @@
+#' @title
+#'  Read DRIFT data from Spectrotest Macro Measurements text file
+#'
+#' @family drift
+#'
+#' @description
+#'  Read DRIFT data from \emph{Spectrotest Macro Measurements} text file
+#'  or connection produced by \emph{FT-CONTROL} software of
+#'  \emph{FTIR}-spectrometer
+#'
+#' @param con
+#'  a \code{\link{connection}} object or a character string
+#'
+#' @return
+#'  An object of \code{\link{S3-class}} \emph{drift}
+#'
+#' @details
+#'  argument \code{con} has the same meaning as in \code{\link{readLines}}
+#'
+#' @export
+#'
+#' @examples
+#'  #
+#'  1 + 1
+
+
+read.drift <- function(con){
+  buffer <- readLines(con, skipNul = TRUE)
+  drift_data <-
+    as.matrix(
+      utils::read.table(
+        header = FALSE, sep = ";", dec = ".",
+        row.names = 1, colClasses = "numeric",
+        nrows = length(buffer), fill = FALSE,
+        blank.lines.skip = TRUE, comment.char = "#", text = buffer)
+    )
+  colnames(drift_data) <- sprintf("Cell_%02i", seq_len(ncol(drift_data)))
+  meta <-
+    lapply(
+      t(
+        utils::read.table(
+          header = FALSE, sep = " ", dec = ".", row.names = 3,
+          colClasses = "character", comment.char = "",
+          text = grep(utils::glob2rx("# @ *"), buffer, value = TRUE),
+          stringsAsFactors = FALSE)[3])[1, ],
+      function(x) {
+        x <- utils::type.convert(x)
+        if (is.factor(x)) as.character(x) else x
+      }
+    )
+  meta$ftirCells <- ncol(drift_data)
+  structure(drift_data, meta = meta, class = "drift")
+}

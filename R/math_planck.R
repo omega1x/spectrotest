@@ -35,8 +35,7 @@
 #'   (\href{https://en.wikipedia.org/wiki/International_System_of_Units}{SI}
 #'   units of power:
 #'   \eqn{W \cdot m^{-2} \cdot sr^{-1} \cdot \left ( {cm^{-1}} \right )^{-1}}{Wm^(-2)sr^(-1)(1/cm)^(-1)})
-#'   as a numeric vector with recalculated \dfn{ABB} parameters
-#'   (\code{temperature}, \code{x0}, \code{y0}) as attributes
+#'   as a numeric vector
 #'
 #' @details
 #'   Only one of the next \dfn{ABB} radiance parameters should be provided:
@@ -76,7 +75,5 @@ planck <- function(x,
   checkmate::assert_number(x0, lower = .Machine$double.eps)
   checkmate::assert_number(y0, lower = .Machine$double.eps)
 
-  structure(
-    .Data = 11.910428196*(x*1e-3)^3/(exp(1.43876731408165*x/temperature) - 1),
-    temperature = temperature, x0 = x0, y0 = y0)
+  11.910428196*(x*1e-3)^3/(exp(1.43876731408165*x/temperature) - 1)
 }
