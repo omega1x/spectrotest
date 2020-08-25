@@ -37,6 +37,7 @@ units which actually is \emph{reflectance}.
  1 + 1
 }
 \seealso{
-Other drift: \code{\link{read.drift}}
+Other drift: \code{\link{coal_drift}},
+  \code{\link{read.drift}}
 }
 \concept{drift}

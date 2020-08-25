@@ -37,14 +37,24 @@
 #'  #
 #'  1 + 1
 
-plot.drift <- function(x, y = NULL, ...){
+plot.drift <- function(x, y = NULL, ...) {
   arg_list <- list(...)
 
   checkmate::assert_character(y, any.missing = FALSE, null.ok = TRUE)
-  checkmate::assert_numeric(arg_list$xlim,
-    any.missing = FALSE, len = 2, unique = TRUE, null.ok = TRUE)
-  checkmate::assert_numeric(arg_list$ylim,
-    any.missing = FALSE, len = 2, unique = TRUE, null.ok = TRUE)
+  checkmate::assert_numeric(
+    arg_list$xlim,
+    any.missing = FALSE,
+    len = 2,
+    unique = TRUE,
+    null.ok = TRUE
+  )
+  checkmate::assert_numeric(
+    arg_list$ylim,
+    any.missing = FALSE,
+    len = 2,
+    unique = TRUE,
+    null.ok = TRUE
+  )
   checkmate::assert_string(arg_list$xlab, null.ok = TRUE)
   checkmate::assert_string(arg_list$ylab, null.ok = TRUE)
 
@@ -52,40 +62,44 @@ plot.drift <- function(x, y = NULL, ...){
 
   # Make up canvas:
   do.call(graphics::plot.default,
-    within(arg_list, {
-      xlim <- if (!exists("xlim")) rev(range(wave_numbers)) else xlim
-      ylim <- if (!exists("ylim")) range(x) else ylim
-      xlab <- if (!exists("xlab")) "Wavenumbers, cm\u207b\ub9" else xlab
-      ylab <- if (!exists("ylab")) attr(x, "meta")$ftirIntensityMode else ylab
-      y <- x <- 0
-      type <- "n"
-    })
-  )
+          within(arg_list, {
+            xlim <- if (!exists("xlim")) rev(range(wave_numbers)) else xlim
+            ylim <- if (!exists("ylim")) range(x) else ylim
+            xlab <- if (!exists("xlab")) "Wavenumbers, cm\u207b\ub9" else xlab
+            ylab <-
+              if (!exists("ylab")) attr(x, "meta")$ftirIntensityMode else ylab
+            y <- x <- 0
+            type <- "n"
+          }))
 
   graphics::title("SPECTROTEST", adj = 1)
 
   # Print meta-data:
-  if (is.null(y)) y <- c("ftirValidFileName", "ftirDatetime", "ftirCells")
+  if (is.null(y))
+    y <- c("ftirValidFileName", "ftirDatetime", "ftirCells")
 
   query_keys <- unique(unlist(lapply(
-    y, grep, x = names(attr(x, "meta")), value = TRUE)))
+    y, grep, x = names(attr(x, "meta")), value = TRUE
+  )))
 
-    if (length(query_keys) > 0){
-    write.dcf(
-      attr(x, "meta")[query_keys],
-      file = {
-        meta_text <- c(
-          "DRIFT-spectroscopy measurement attributes",
-          paste(rep("\u2591", 30), collapse = "")
-        )
-        conn <- textConnection("meta_text", "a", local = TRUE)
-        on.exit(close(conn))
-        conn
-      })
+  if (length(query_keys) > 0) {
+    write.dcf(attr(x, "meta")[query_keys],
+              file = {
+                meta_text <- c("DRIFT-spectroscopy measurement attributes",
+                               paste(rep("\u2591", 30), collapse = ""))
+                conn <- textConnection("meta_text", "a", local = TRUE)
+                on.exit(close(conn))
+                conn
+              })
 
     graphics::mtext(
-      text = paste(meta_text, collapse="\n"),
-      cex = 0.7, adj = 0.01, line = -0.5, padj = 1, bty = "c", bg = "grey"
+      text = paste(meta_text, collapse = "\n"),
+      cex = 0.7,
+      adj = 0.01,
+      line = -0.5,
+      padj = 1,
+      bty = "c",
+      bg = "grey"
     )
   }
 

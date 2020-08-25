@@ -15,18 +15,19 @@ An object of \code{\link{S3-class}} \emph{drift}
 }
 \description{
 Read \href{https://en.wikipedia.org/wiki/Diffuse_reflectance_infrared_fourier_transform_spectroscopy}{DRIFTS}
- spectrum from \emph{Spectrotest Macro Measurements} text file or
+ spectrum from \emph{Spectrotest} text file or
  connection produced by \emph{FT-CONTROL} software for
  \emph{FTIR}-spectrometers
 }
 \details{
-argument \code{con} has the same meaning as in \code{\link{readLines}}
+Argument \code{con} has the same meaning as in \code{\link{readLines}}
 }
 \examples{
  #
  1 + 1
 }
 \seealso{
-Other drift: \code{\link{plot.drift}}
+Other drift: \code{\link{coal_drift}},
+  \code{\link{plot.drift}}
 }
 \concept{drift}
