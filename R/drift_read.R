@@ -7,23 +7,33 @@
 #'  Read \href{https://en.wikipedia.org/wiki/Diffuse_reflectance_infrared_fourier_transform_spectroscopy}{DRIFTS}
 #'  spectrum from \emph{Spectrotest} text file or
 #'  connection produced by \emph{FT-CONTROL} software for
-#'  \emph{FTIR}-spectrometers
+#'  \emph{FTIR}-spectrometers.
 #'
 #' @param con
 #'  a \code{\link{connection}} object or a character string naming the file
-#'  to read
+#'  to read.
 #'
 #' @return
-#'  An object of \code{\link{S3-class}} \emph{drift}
+#'  An object of \code{\link{S3-class}} \emph{drift}.
 #'
 #' @details
-#'  Argument \code{con} has the same meaning as in \code{\link{readLines}}
+#'  Argument \code{con} has the same meaning as in \code{\link{readLines}}.
 #'
 #' @export
 #'
 #' @examples
-#'  #
-#'  1 + 1
+#'  s0 <- coal_drift()
+#'
+#'  # Write to text file:
+#'  write.drift(s0, "s0.ir")
+#'
+#'  # Read from text file:
+#'  s1 <- read.drift("s0.ir")
+#'
+#'  unlink("s0.ir")
+#'
+#'  # Light unit test:
+#'  stopifnot(all(s0 == s1))
 
 read.drift <- function(con) {
   buffer <- readLines(con, skipNul = TRUE)  # readLines used as assertion

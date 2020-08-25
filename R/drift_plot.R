@@ -11,18 +11,18 @@
 #'  \href{https://en.wikipedia.org/wiki/Infrared}{infrared} range.
 #'
 #' @param x
-#'  an object of \code{\link{S3-class}} \emph{drift}
+#'  an object of \code{\link{S3-class}} \emph{drift}.
 #'
 #' @param y
 #'  character vector of \code{\link{regex}}es that are searched against the list
 #'  of DRIFT-spectroscopy measurment attributes embedded in the object to
-#'  print them on plot
+#'  print them on plot.
 #'
 #' @param ...
-#'  other parameters to \code{\link{plot.default}} and to \code{\link{lines}}
+#'  other parameters to \code{\link{plot.default}} and to \code{\link{lines}}.
 #'
 #' @return
-#'  NULL, invisibly
+#'  NULL, invisibly.
 #'
 #' @details
 #' For raw measurements in DRIFT-spectroscopy the \emph{signal} represents the
@@ -34,8 +34,8 @@
 #' @export
 #'
 #' @examples
-#'  #
-#'  1 + 1
+#'  s <- coal_drift()
+#'  plot(s)
 
 plot.drift <- function(x, y = NULL, ...) {
   arg_list <- list(...)

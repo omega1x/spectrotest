@@ -7,10 +7,10 @@
 coal_drift(x = c("X", "OC", "KO", "KC", "GXO", "GX"))
 }
 \arguments{
-\item{x}{an abbreviation for coal rank}
+\item{x}{an abbreviation for coal rank.}
 }
 \value{
-An object of \code{\link{S3-class}} \emph{drift}
+An object of \code{\link{S3-class}} \emph{drift}.
 }
 \description{
 Get the example of DRIFT-spectrum for the given rank of hard coal from
@@ -29,6 +29,6 @@ Latin character abbreviations of coal ranks used as values to argument
 }
 \seealso{
 Other drift: \code{\link{plot.drift}},
-  \code{\link{read.drift}}
+  \code{\link{read.drift}}, \code{\link{write.drift}}
 }
 \concept{drift}

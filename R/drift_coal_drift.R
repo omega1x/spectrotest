@@ -8,10 +8,10 @@
 #'  internal library as an object of \code{\link{S3-class}} \emph{drift}.
 #'
 #' @param x
-#'  an abbreviation for coal rank
+#'  an abbreviation for coal rank.
 #'
 #' @return
-#'  An object of \code{\link{S3-class}} \emph{drift}
+#'  An object of \code{\link{S3-class}} \emph{drift}.
 #'
 #' @details
 #'  Latin character abbreviations of coal ranks used as values to argument

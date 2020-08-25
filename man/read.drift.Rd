@@ -8,26 +8,36 @@ read.drift(con)
 }
 \arguments{
 \item{con}{a \code{\link{connection}} object or a character string naming the file
-to read}
+to read.}
 }
 \value{
-An object of \code{\link{S3-class}} \emph{drift}
+An object of \code{\link{S3-class}} \emph{drift}.
 }
 \description{
 Read \href{https://en.wikipedia.org/wiki/Diffuse_reflectance_infrared_fourier_transform_spectroscopy}{DRIFTS}
  spectrum from \emph{Spectrotest} text file or
  connection produced by \emph{FT-CONTROL} software for
- \emph{FTIR}-spectrometers
+ \emph{FTIR}-spectrometers.
 }
 \details{
-Argument \code{con} has the same meaning as in \code{\link{readLines}}
+Argument \code{con} has the same meaning as in \code{\link{readLines}}.
 }
 \examples{
- #
- 1 + 1
+ s0 <- coal_drift()
+
+ # Write to text file:
+ write.drift(s0, "s0.ir")
+
+ # Read from text file:
+ s1 <- read.drift("s0.ir")
+
+ unlink("s0.ir")
+
+ # Light unit test:
+ stopifnot(all(s0 == s1))
 }
 \seealso{
 Other drift: \code{\link{coal_drift}},
-  \code{\link{plot.drift}}
+  \code{\link{plot.drift}}, \code{\link{write.drift}}
 }
 \concept{drift}

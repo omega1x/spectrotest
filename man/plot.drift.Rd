@@ -7,16 +7,16 @@
 \method{plot}{drift}(x, y = NULL, ...)
 }
 \arguments{
-\item{x}{an object of \code{\link{S3-class}} \emph{drift}}
+\item{x}{an object of \code{\link{S3-class}} \emph{drift}.}
 
 \item{y}{character vector of \code{\link{regex}}es that are searched against the list
 of DRIFT-spectroscopy measurment attributes embedded in the object to
-print them on plot}
+print them on plot.}
 
-\item{...}{other parameters to \code{\link{plot.default}} and to \code{\link{lines}}}
+\item{...}{other parameters to \code{\link{plot.default}} and to \code{\link{lines}}.}
 }
 \value{
-NULL, invisibly
+NULL, invisibly.
 }
 \description{
 A method for the \code{\link{plot}} generics specified for
@@ -33,11 +33,11 @@ the raw signal in FTIR-spectrometer may assign \href{https://en.wikipedia.org/wi
 units which actually is \emph{reflectance}.
 }
 \examples{
- #
- 1 + 1
+ s <- coal_drift()
+ plot(s)
 }
 \seealso{
 Other drift: \code{\link{coal_drift}},
-  \code{\link{read.drift}}
+  \code{\link{read.drift}}, \code{\link{write.drift}}
 }
 \concept{drift}
