@@ -2,20 +2,22 @@
 % Please edit documentation in R/drift_read.R
 \name{read.drift}
 \alias{read.drift}
-\title{Read DRIFT data from Spectrotest Macro Measurements text file}
+\title{Read DRIFT-spectroscopy data}
 \usage{
 read.drift(con)
 }
 \arguments{
-\item{con}{a \code{\link{connection}} object or a character string}
+\item{con}{a \code{\link{connection}} object or a character string naming the file
+to read}
 }
 \value{
 An object of \code{\link{S3-class}} \emph{drift}
 }
 \description{
-Read DRIFT data from \emph{Spectrotest Macro Measurements} text file
- or connection produced by \emph{FT-CONTROL} software of
- \emph{FTIR}-spectrometer
+Read \href{https://en.wikipedia.org/wiki/Diffuse_reflectance_infrared_fourier_transform_spectroscopy}{DRIFTS}
+ spectrum from \emph{Spectrotest Macro Measurements} text file or
+ connection produced by \emph{FT-CONTROL} software for
+ \emph{FTIR}-spectrometers
 }
 \details{
 argument \code{con} has the same meaning as in \code{\link{readLines}}
@@ -23,5 +25,8 @@ argument \code{con} has the same meaning as in \code{\link{readLines}}
 \examples{
  #
  1 + 1
+}
+\seealso{
+Other drift: \code{\link{plot.drift}}
 }
 \concept{drift}

@@ -1,15 +1,17 @@
 #' @title
-#'  Read DRIFT data from Spectrotest Macro Measurements text file
+#'  Read DRIFT-spectroscopy data
 #'
 #' @family drift
 #'
 #' @description
-#'  Read DRIFT data from \emph{Spectrotest Macro Measurements} text file
-#'  or connection produced by \emph{FT-CONTROL} software of
-#'  \emph{FTIR}-spectrometer
+#'  Read \href{https://en.wikipedia.org/wiki/Diffuse_reflectance_infrared_fourier_transform_spectroscopy}{DRIFTS}
+#'  spectrum from \emph{Spectrotest Macro Measurements} text file or
+#'  connection produced by \emph{FT-CONTROL} software for
+#'  \emph{FTIR}-spectrometers
 #'
 #' @param con
-#'  a \code{\link{connection}} object or a character string
+#'  a \code{\link{connection}} object or a character string naming the file
+#'  to read
 #'
 #' @return
 #'  An object of \code{\link{S3-class}} \emph{drift}
@@ -23,9 +25,8 @@
 #'  #
 #'  1 + 1
 
-
 read.drift <- function(con){
-  buffer <- readLines(con, skipNul = TRUE)
+  buffer <- readLines(con, skipNul = TRUE)  # readLines used as assertion
   drift_data <-
     as.matrix(
       utils::read.table(
