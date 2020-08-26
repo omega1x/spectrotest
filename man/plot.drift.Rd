@@ -22,14 +22,14 @@ NULL, invisibly.
 A method for the \code{\link{plot}} generics specified for
  objects of \code{\link{S3-class}} \emph{drift}. Method plots
  \href{https://en.wikipedia.org/wiki/Diffuse_reflectance_infrared_fourier_transform_spectroscopy}{DRIFTS}
- spectra in coordinates \emph{wavenumbers}-\emph{signal} for middle
+ spectra in coordinates \emph{wavenumbers}-\emph{intensity} for middle
  \href{https://en.wikipedia.org/wiki/Infrared}{infrared} range.
 }
 \details{
-For raw measurements in DRIFT-spectroscopy the \emph{signal} represents the
+For raw measurements in DRIFT-spectroscopy the \emph{intensity} represents the
 proportion of diffuse \href{https://en.wikipedia.org/wiki/Reflectance}{reflectance}
 radiated by specimen. Note that due to optic geometry in DRIFT-spectroscopy
-the raw signal in FTIR-spectrometer may assign \href{https://en.wikipedia.org/wiki/Transmittance}{transmittance}
+the raw intensity in FTIR-spectrometer may assign \href{https://en.wikipedia.org/wiki/Transmittance}{transmittance}
 units which actually is \emph{reflectance}.
 }
 \examples{

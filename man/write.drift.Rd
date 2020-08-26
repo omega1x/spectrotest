@@ -13,7 +13,7 @@ write.drift(x, file = "")
 to write to.}
 }
 \value{
-NULL, invisibly.
+Spectrotest formatted string, invisibly.
 }
 \description{
 Write object of \code{\link{S3-class}} \emph{drift} in Spectrotest

@@ -19,7 +19,7 @@
 #'  to write to.
 #'
 #' @return
-#'  NULL, invisibly.
+#'  Spectrotest formatted string, invisibly.
 #'
 #' @details
 #'  Argument \code{file} has the same meaning as in \code{\link{write}}.
@@ -85,4 +85,5 @@ write.drift <- function(x, file = "") {
   ),
   collapse = "\n")
   cat(output_text, file = file)
+  invisible(output_text)
 }
