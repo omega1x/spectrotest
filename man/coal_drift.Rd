@@ -2,7 +2,7 @@
 % Please edit documentation in R/drift_coal_drift.R
 \name{coal_drift}
 \alias{coal_drift}
-\title{Get DRIFT-spectrum of hard coal}
+\title{DRIFT-spectrum of hard coal}
 \usage{
 coal_drift(x = c("X", "OC", "KO", "KC", "GXO", "GX"))
 }
@@ -28,7 +28,8 @@ Latin character abbreviations of coal ranks used as values to argument
 
 }
 \seealso{
-Other drift: \code{\link{plot.drift}},
-  \code{\link{read.drift}}, \code{\link{write.drift}}
+Other drift: \code{\link{cbind.drift}},
+  \code{\link{plot.drift}}, \code{\link{read.drift}},
+  \code{\link{write.drift}}
 }
 \concept{drift}

@@ -37,7 +37,8 @@ units which actually is \emph{reflectance}.
  plot(s)
 }
 \seealso{
-Other drift: \code{\link{coal_drift}},
-  \code{\link{read.drift}}, \code{\link{write.drift}}
+Other drift: \code{\link{cbind.drift}},
+  \code{\link{coal_drift}}, \code{\link{read.drift}},
+  \code{\link{write.drift}}
 }
 \concept{drift}

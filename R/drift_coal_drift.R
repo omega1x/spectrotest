@@ -1,5 +1,5 @@
 #' @title
-#'  Get DRIFT-spectrum of hard coal
+#'  DRIFT-spectrum of hard coal
 #'
 #' @family drift
 #'
