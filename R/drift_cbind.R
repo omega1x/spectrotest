@@ -12,10 +12,8 @@ cbind.drift <- function(..., deparse.level = 1){
   obj <- list(...)
   meta <- attr(obj[[1]], "meta")
   wave_numbers <- rownames(obj[[1]])
-  obj <- lapply(
-    obj,
-    function(x) if (class(x) == "drift") unclass(x) else x
-  )
+  for (i in seq_along(obj))
+    if (class(obj[[i]]) == "drift") attr(obj[[i]], "class") <- NULL
   obj <- do.call(cbind, obj)
   n <- ncol(obj)
   meta$ftirCells <-  n
