@@ -38,7 +38,7 @@ Argument \code{con} has the same meaning as in \code{\link{readLines}}.
 }
 \seealso{
 Other drift: \code{\link{cbind.drift}},
-  \code{\link{coal_drift}}, \code{\link{plot.drift}},
-  \code{\link{write.drift}}
+  \code{\link{coal_drift}}, \code{\link{deriv.drift}},
+  \code{\link{plot.drift}}, \code{\link{write.drift}}
 }
 \concept{drift}

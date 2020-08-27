@@ -38,6 +38,7 @@
 #'  plot(s)
 
 plot.drift <- function(x, y = NULL, ...) {
+  checkmate::assert_class(x, "drift")
   arg_list <- list(...)
 
   checkmate::assert_character(y, any.missing = FALSE, null.ok = TRUE)

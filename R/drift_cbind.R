@@ -35,6 +35,7 @@
 #'
 
 cbind.drift <- function(..., deparse.level = 1){
+  checkmate::assert_class(..1, "drift")
   checkmate::assert_choice(deparse.level, 0:2)
   obj <- list(...)
   meta <- attr(obj[[1]], "meta")

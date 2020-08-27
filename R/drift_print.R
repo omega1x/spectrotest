@@ -1,6 +1,7 @@
 #' @export
 
 print.drift <- function(x, ...) {
+  checkmate::assert_class(x, "drift")
   screen_cast <- sprintf(
     paste0(
       c(
