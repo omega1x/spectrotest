@@ -10,8 +10,7 @@ Description: Toolset to manipulate with diffuse reflectance spectroscopy data
     construction pipeline for quantitative structure-property relationship
     models.
 Imports:
-    checkmate,
-    stats
+    checkmate
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
