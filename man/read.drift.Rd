@@ -40,6 +40,6 @@ Argument \code{con} has the same meaning as in \code{\link{readLines}}.
 Other drift: \code{\link{as.data.frame.drift}},
   \code{\link{cbind.drift}}, \code{\link{coal_drift}},
   \code{\link{diff.drift}}, \code{\link{plot.drift}},
-  \code{\link{write.drift}}
+  \code{\link{slice}}, \code{\link{write.drift}}
 }
 \concept{drift}

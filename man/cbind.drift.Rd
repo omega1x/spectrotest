@@ -38,6 +38,6 @@ Take a sequence of \code{\link{S3-class}} \emph{drift}, vector, matrix or
 Other drift: \code{\link{as.data.frame.drift}},
   \code{\link{coal_drift}}, \code{\link{diff.drift}},
   \code{\link{plot.drift}}, \code{\link{read.drift}},
-  \code{\link{write.drift}}
+  \code{\link{slice}}, \code{\link{write.drift}}
 }
 \concept{drift}

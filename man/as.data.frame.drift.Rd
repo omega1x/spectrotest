@@ -40,6 +40,6 @@ A method for the \code{\link{as.data.frame}} generics specified for
 Other drift: \code{\link{cbind.drift}},
   \code{\link{coal_drift}}, \code{\link{diff.drift}},
   \code{\link{plot.drift}}, \code{\link{read.drift}},
-  \code{\link{write.drift}}
+  \code{\link{slice}}, \code{\link{write.drift}}
 }
 \concept{drift}

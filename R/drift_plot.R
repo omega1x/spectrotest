@@ -106,7 +106,9 @@ plot.drift <- function(x, y = NULL, ...) {
 
   # Draw DRIFT-data:
   for (cell in seq_len(ncol(x)))
-    do.call(graphics::lines, within(arg_list, {
+    do.call(
+      if (nrow(x) > 1) graphics::lines else graphics::points,
+      within(arg_list, {
       y <- unclass(x)[, cell]
       x <- wave_numbers
     }))

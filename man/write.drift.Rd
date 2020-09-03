@@ -55,6 +55,6 @@ Argument \code{file} has the same meaning as in \code{\link{write}}.
 Other drift: \code{\link{as.data.frame.drift}},
   \code{\link{cbind.drift}}, \code{\link{coal_drift}},
   \code{\link{diff.drift}}, \code{\link{plot.drift}},
-  \code{\link{read.drift}}
+  \code{\link{read.drift}}, \code{\link{slice}}
 }
 \concept{drift}

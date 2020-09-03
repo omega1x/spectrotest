@@ -19,6 +19,7 @@
 }
 
 
+#' @export
 "[[.drift" <- function(x, key) {
   checkmate::assert_class(x, "drift")
   checkmate::assert_string(key)
@@ -26,10 +27,11 @@
 }
 
 
+#' @export
 "[[<-.drift" <- function(x, key, value) {
   checkmate::assert_class(x, "drift")
   checkmate::assert_string(key)
   checkmate::assert_scalar(value)
   attr(x, "meta")[[key]] <- value
-  x
+  return(x)
 }

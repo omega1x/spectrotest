@@ -19,13 +19,37 @@
 #'  \emph{Brown coals, hard coals and anthracites. Classification according to genetic and technological parameters}
 #'  as close as possible.
 #'
+#'  The function is a primary constructor of objects of
+#'  \code{\link{S3-class}} \emph{drift}. Other widely used constructor
+#'  is \code{\link{read.drift}}.
+#'
+#'  Objects of \code{\link{S3-class}} \emph{drift} can be indexed in the same
+#'  manner as \code{\link{matrix}} objects. Though most of mathematical
+#'  operation methos (see \code{\link{groupGeneric}}) inherite from
+#'  \code{\link{matrix}} class some domain specific operations are rethinked.
+#'
 #' @export
 #'
 #' @examples
 #'  s <- coal_drift()
 #'  plot(s)
 #'
-
+#'  # Indexing technique:
+#'  #  - get first measurement cell in channels where CO2
+#'  #    absorbtion is expected:
+#'  s_co2 <- s[c(996:1000, 1064:1070), 1]
+#'  plot(s_co2)  # liner segment is plotted for 1000-1064 1/cm range
+#'
+#'  #  - get DRIFT-spectrum meta-data
+#'  stopifnot(
+#'    s[["ftirValidFileName"]] == "X",
+#'    s[["gostAd"]] == 9.3
+#'  )
+#'
+#'  #  - set or reset new DRIFT-spectrum meta-data
+#'  s[["ftirValidFileName"]] <- "BituminousBlendComponent"  # provide no spaces!
+#'  plot(s)
+#'
 coal_drift <- function(x = c("X", "OC", "KO", "KC", "GXO", "GX")){
   x = match.arg(x)
   checkmate::assert_choice(x, c("X", "OC", "KO", "KC", "GXO", "GX"))
