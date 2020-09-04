@@ -3,6 +3,7 @@
 S3method("[",drift)
 S3method("[[",drift)
 S3method("[[<-",drift)
+S3method(Ops,drift)
 S3method(as.data.frame,drift)
 S3method(cbind,drift)
 S3method(diff,drift)
