@@ -44,11 +44,19 @@ cbind.drift <- function(..., deparse.level = 1){
     if (class(obj[[i]]) == "drift") attr(obj[[i]], "class") <- NULL
   obj <- do.call(cbind, obj)
   n <- ncol(obj)
-  if (deparse.level == 0) colnames(obj) <- NULL
-  if (deparse.level == 2) colnames(obj) <- sprintf("Cell_%02i", seq_len(n))
   meta$ftirCells <-  n
-  attr(obj, "meta") <- meta
-  rownames(obj) <- wave_numbers
-  class(obj) <- "drift"
-  obj
+  structure(
+    obj,
+    dimnames = list(
+      wave_numbers,
+      switch(
+        deparse.level + 1,
+        NULL,
+        colnames(obj),
+        sprintf("Cell_%02i", seq_len(n))
+      )
+    ),
+    meta = meta,
+    class = "drift"
+  )
 }
