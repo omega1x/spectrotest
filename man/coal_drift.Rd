@@ -51,6 +51,13 @@ Latin character abbreviations of coal ranks used as values to argument
  s[["ftirValidFileName"]] <- "BituminousBlendComponent"  # provide no spaces!
  plot(s)
 
+ # Arithmetics with DRIFT-spectra:
+ sgx <- -median(coal_drift("GX")) + 7.437333
+ soc <- -median(coal_drift("OC")) + 7.004013
+ wn <- 2920
+ ds <- sgx - soc*as.double(slice(sgx, wn)/slice(soc, wn))
+ plot(ds); abline(h = 0, v = wn)
+
 }
 \seealso{
 Other drift: \code{\link{as.data.frame.drift}},

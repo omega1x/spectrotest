@@ -50,6 +50,13 @@
 #'  s[["ftirValidFileName"]] <- "BituminousBlendComponent"  # provide no spaces!
 #'  plot(s)
 #'
+#'  # Arithmetics with DRIFT-spectra:
+#'  sgx <- -median(coal_drift("GX")) + 7.437333
+#'  soc <- -median(coal_drift("OC")) + 7.004013
+#'  wn <- 2920
+#'  ds <- sgx - soc*as.double(slice(sgx, wn)/slice(soc, wn))
+#'  plot(ds); abline(h = 0, v = wn)
+#'
 coal_drift <- function(x = c("X", "OC", "KO", "KC", "GXO", "GX")){
   x = match.arg(x)
   checkmate::assert_choice(x, c("X", "OC", "KO", "KC", "GXO", "GX"))
