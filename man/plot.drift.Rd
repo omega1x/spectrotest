@@ -38,9 +38,9 @@ units which actually is \emph{reflectance}.
 }
 \seealso{
 Other drift: \code{\link{as.data.frame.drift}},
-  \code{\link{cbind.drift}}, \code{\link{coal_drift}},
-  \code{\link{diff.drift}}, \code{\link{median.drift}},
-  \code{\link{read.drift}}, \code{\link{slice}},
-  \code{\link{write.drift}}
+  \code{\link{cbind.drift}}, \code{\link{channel}},
+  \code{\link{coal_drift}}, \code{\link{diff.drift}},
+  \code{\link{median.drift}}, \code{\link{read.drift}},
+  \code{\link{slice}}, \code{\link{write.drift}}
 }
 \concept{drift}
