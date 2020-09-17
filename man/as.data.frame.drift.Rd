@@ -4,8 +4,7 @@
 \alias{as.data.frame.drift}
 \title{Coerce DRIFT-spectrum to a Data Frame}
 \usage{
-\method{as.data.frame}{drift}(x, row.names = NULL, optional = FALSE,
-  ...)
+\method{as.data.frame}{drift}(x, row.names = NULL, optional = FALSE, ...)
 }
 \arguments{
 \item{x}{an object of \code{\link{S3-class}} \emph{drift}.}
@@ -37,10 +36,15 @@ A method for the \code{\link{as.data.frame}} generics specified for
 
 }
 \seealso{
-Other drift: \code{\link{cbind.drift}},
-  \code{\link{channel}}, \code{\link{coal_drift}},
-  \code{\link{diff.drift}}, \code{\link{median.drift}},
-  \code{\link{plot.drift}}, \code{\link{read.drift}},
-  \code{\link{slice}}, \code{\link{write.drift}}
+Other drift: 
+\code{\link{cbind.drift}()},
+\code{\link{channel}()},
+\code{\link{coal_drift}()},
+\code{\link{diff.drift}()},
+\code{\link{median.drift}()},
+\code{\link{plot.drift}()},
+\code{\link{read.drift}()},
+\code{\link{slice}()},
+\code{\link{write.drift}()}
 }
 \concept{drift}

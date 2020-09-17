@@ -28,10 +28,15 @@ Get the channel numbers for appropriate wave numbers in the scale of the
  print(co2)
 }
 \seealso{
-Other drift: \code{\link{as.data.frame.drift}},
-  \code{\link{cbind.drift}}, \code{\link{coal_drift}},
-  \code{\link{diff.drift}}, \code{\link{median.drift}},
-  \code{\link{plot.drift}}, \code{\link{read.drift}},
-  \code{\link{slice}}, \code{\link{write.drift}}
+Other drift: 
+\code{\link{as.data.frame.drift}()},
+\code{\link{cbind.drift}()},
+\code{\link{coal_drift}()},
+\code{\link{diff.drift}()},
+\code{\link{median.drift}()},
+\code{\link{plot.drift}()},
+\code{\link{read.drift}()},
+\code{\link{slice}()},
+\code{\link{write.drift}()}
 }
 \concept{drift}

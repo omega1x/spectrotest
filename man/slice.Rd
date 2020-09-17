@@ -45,10 +45,15 @@ Return a subset of a DRIFT-spectrum in the given range of wavenumbers.
 
 }
 \seealso{
-Other drift: \code{\link{as.data.frame.drift}},
-  \code{\link{cbind.drift}}, \code{\link{channel}},
-  \code{\link{coal_drift}}, \code{\link{diff.drift}},
-  \code{\link{median.drift}}, \code{\link{plot.drift}},
-  \code{\link{read.drift}}, \code{\link{write.drift}}
+Other drift: 
+\code{\link{as.data.frame.drift}()},
+\code{\link{cbind.drift}()},
+\code{\link{channel}()},
+\code{\link{coal_drift}()},
+\code{\link{diff.drift}()},
+\code{\link{median.drift}()},
+\code{\link{plot.drift}()},
+\code{\link{read.drift}()},
+\code{\link{write.drift}()}
 }
 \concept{drift}

@@ -37,10 +37,15 @@ Argument \code{con} has the same meaning as in \code{\link{readLines}}.
  stopifnot(all(s0 == s1))
 }
 \seealso{
-Other drift: \code{\link{as.data.frame.drift}},
-  \code{\link{cbind.drift}}, \code{\link{channel}},
-  \code{\link{coal_drift}}, \code{\link{diff.drift}},
-  \code{\link{median.drift}}, \code{\link{plot.drift}},
-  \code{\link{slice}}, \code{\link{write.drift}}
+Other drift: 
+\code{\link{as.data.frame.drift}()},
+\code{\link{cbind.drift}()},
+\code{\link{channel}()},
+\code{\link{coal_drift}()},
+\code{\link{diff.drift}()},
+\code{\link{median.drift}()},
+\code{\link{plot.drift}()},
+\code{\link{slice}()},
+\code{\link{write.drift}()}
 }
 \concept{drift}

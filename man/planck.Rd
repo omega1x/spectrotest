@@ -4,8 +4,12 @@
 \alias{planck}
 \title{Calculate the spectral radiance of the Absolutely Black Body}
 \usage{
-planck(x, temperature = y0^(1/3) * 560.323665873058, x0 = temperature *
-  1.9610115857552, y0 = (x0 * 0.001)^3 * 0.75377608961114)
+planck(
+  x,
+  temperature = y0^(1/3) * 560.323665873058,
+  x0 = temperature * 1.9610115857552,
+  y0 = (x0 * 0.001)^3 * 0.75377608961114
+)
 }
 \arguments{
 \item{x}{numeric vector of \href{https://en.wikipedia.org/wiki/Wavenumber}{wavenumbers}

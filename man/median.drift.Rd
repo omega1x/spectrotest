@@ -33,10 +33,15 @@ Given cells of measurements, make up the aggregated measurement with
  stopifnot(ncol(x) == 1)
 }
 \seealso{
-Other drift: \code{\link{as.data.frame.drift}},
-  \code{\link{cbind.drift}}, \code{\link{channel}},
-  \code{\link{coal_drift}}, \code{\link{diff.drift}},
-  \code{\link{plot.drift}}, \code{\link{read.drift}},
-  \code{\link{slice}}, \code{\link{write.drift}}
+Other drift: 
+\code{\link{as.data.frame.drift}()},
+\code{\link{cbind.drift}()},
+\code{\link{channel}()},
+\code{\link{coal_drift}()},
+\code{\link{diff.drift}()},
+\code{\link{plot.drift}()},
+\code{\link{read.drift}()},
+\code{\link{slice}()},
+\code{\link{write.drift}()}
 }
 \concept{drift}
