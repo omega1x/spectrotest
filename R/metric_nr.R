@@ -40,7 +40,7 @@ nr <- function(x) {
   checkmate::assert_class(x, "drift")
   # Note! Only spectra within 349.1157 - 7501.1654 1/cm range recorded
   # in 3709 channels are allowed!
-  wave_numbers <- as.numeric(rownames(x))
+  wave_numbers <- as.double(rownames(x))
   checkmate::assert_true(length(wave_numbers) == 3709L)
   # Note! Only raw spectra, i.e. recorded in %Transmittance mode, could be processed
   checkmate::assert_string(x[["ftirIntensityMode"]], pattern = "%Transmittance")
