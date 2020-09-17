@@ -44,7 +44,7 @@ nr <- function(x) {
   checkmate::assert_true(length(wave_numbers) == 3709L)
   # Note! Only raw spectra, i.e. recorded in %Transmittance mode, could be processed
   checkmate::assert_string(x[["ftirIntensityMode"]], pattern = "%Transmittance")
-  max_power = x[['ftirPowerMax']]
+  max_power <- x[['ftirPowerMax']]
   checkmate::assert_complex(max_power, null.ok = FALSE)
   power <- try(
     utils::read.table(
@@ -53,7 +53,7 @@ nr <- function(x) {
     silent = TRUE
   )
   checkmate::assert_complex(power, null.ok = FALSE)
-  MAX_REFL_RANGE = c(1700, 2300)  # [1/cm]
+  MAX_REFL_RANGE <- c(1700, 2300)  # [1/cm]
   checkmate::assert_true(is.in(MAX_REFL_RANGE, range(wave_numbers)))  # always true?
 
   # Find out peak of Planck curve:
