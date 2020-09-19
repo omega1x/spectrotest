@@ -71,4 +71,8 @@ Only one of the next \dfn{ABB} radiance parameters should be provided:
  / \href{http://www.spectralcalc.com/}{www.spectralcalc.com} -
  High-resolution spectral modelling: GATS, Inc.
 }
+\seealso{
+Other math: 
+\code{\link{pinv}()}
+}
 \concept{math}
