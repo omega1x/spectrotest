@@ -65,8 +65,8 @@ nr <- function(x) {
         y ~ beta * f(x, x0),
         data = data.frame(x = wave_numbers[Im(power)], y = Re(power)),
         start = c(beta = 14, x0 = wave_numbers[Im(max_power)]),
-        lower = c(beta = 10, x0 = MAX_REFL_RANGE[1]),
-        upper = c(beta = 20, x0 = MAX_REFL_RANGE[2]),
+        lower = c(beta = 10, x0 = MAX_REFL_RANGE[[1]]),
+        upper = c(beta = 20, x0 = MAX_REFL_RANGE[[2]]),
         algorithm = "port"
       )
       coef(m)
