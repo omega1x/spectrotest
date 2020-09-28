@@ -38,7 +38,7 @@ pinv <- function(x, tol = .Machine$double.eps ^ (2 / 3)) {
   if (all(p)) {
     s$v %*% (1 / s$d * t(s$u))
   } else if (any(p)) {
-    s$v[, p, drop = FALSE] %*% (1 / s$d[[p]] * t(s$u[, p, drop = FALSE]))
+    s$v[, p, drop = FALSE] %*% (1 / s$d[p] * t(s$u[, p, drop = FALSE]))
   } else {
     matrix(0, nrow = ncol(x), ncol = nrow(x))
   }
