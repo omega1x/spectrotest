@@ -31,7 +31,7 @@ plan for appropriate research:
    set of  $\epsilon_i$ consider univariate probability density function
    estimate $F_{\epsilon}$: fit [gld](https://CRAN.R-project.org/package=gld)-
    distribution.
-6. For any fresh ($_f$) spectrum make up decomposition to principal spectra using
+6. For any fresh ($f$-index) spectrum make up decomposition to principal spectra using
    multivariate linear regression with $a_f$-coefficient constraints:
    $a_{l1} \leqslant a_{f1} \leqslant a_{u1}, a_{l2} \leqslant a_{f2} \leqslant a_{u2}, \dots, a_{ln} \leqslant a_{fn} \leqslant a_{un}$.
 7. For this fresh spectrum get the value of $\epsilon_{f}$ and find its
