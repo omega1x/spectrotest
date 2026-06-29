@@ -19,7 +19,7 @@ plan for appropriate research:
 3. Representing each spectra as 3709-component vector (i.e. as a row of a table
    with 3709 columns) use
    [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) and
-   identify ~10 principle components (principle spectra) for the set along with
+   identify $n \sim 10$ principle components (principle spectra) for the set along with
    appropriate loadings $a_{01}, a_{02}, \dots, a_{0n}$, where zero-index means
    that these are coefficients of the total set.
 4. Decompose each $i$-th spectra into those principal spectra obtaining
