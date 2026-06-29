@@ -39,6 +39,12 @@ plan for appropriate research:
 8. Consider $p_{f}$ as a probability of the fresh spectrum to be a spectrum of
    coal.
 
-It might be better to find multivariate distribution for $a_{i1}, a_{i2}, \dots, a_{in}$
-instead of its limits only and then get statistically induced boundaries for
-$a_f$-coefficient constraints.
+> It might be better to find multivariate distribution for
+> $a_{i1}, a_{i2}, \dots, a_{in}$
+> instead of its limits only and then get statistically induced boundaries for
+> $a_f$-coefficient constraints.
+
+Finally check the value of $p_{f}$ for spectra which visually certain are not
+spectra of coal. For example, consider low-energy spectra obtained in
+spectrometer detector fail state, spectra of DRIFT mirror and rough optical
+samples.
